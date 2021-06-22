@@ -72,6 +72,20 @@ phases:
   provisionNodes: false
   serviceName: simple-web-app
   statefulSet: false
+preDeploymentSteps:
+- type: TERRAFORM_APPLY
+  name: Terraform Apply
+  properties:
+    delegateTag: ''
+    exportPlanToApplyStep: false
+    inheritApprovedPlan: true
+    name: Terraform Apply
+    provisionerName: simple-web-app
+    runPlanOnly: false
+    tfVarFiles: ''
+    tfVarGitFileConfig: null
+    timeoutMillis: 300000
+    workspace: ''
 rollbackPhases:
 - type: KUBERNETES
   computeProviderName: Kubernetes Cluster
