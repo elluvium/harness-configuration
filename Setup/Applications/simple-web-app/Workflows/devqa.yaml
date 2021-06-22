@@ -72,6 +72,28 @@ phases:
   provisionNodes: false
   serviceName: simple-web-app
   statefulSet: false
+preDeploymentSteps:
+- type: TERRAFORM_PROVISION
+  name: Terraform Provision
+  properties:
+    backendConfigs:
+    - name: backend
+      valueType: TEXT
+      value: backend
+    delegateTag: ''
+    environmentVariables: null
+    exportPlanToApplyStep: false
+    inheritApprovedPlan: false
+    name: Terraform Provision
+    provisionerName: simple-web-app
+    runPlanOnly: false
+    targets:
+    - azurerm_resource_group.rg
+    tfVarFiles: ''
+    tfVarGitFileConfig: null
+    timeoutMillis: 300000
+    variables: null
+    workspace: ''
 rollbackPhases:
 - type: KUBERNETES
   computeProviderName: Kubernetes Cluster
