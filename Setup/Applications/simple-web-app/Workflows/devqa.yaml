@@ -86,6 +86,9 @@ preDeploymentSteps:
     runPlanOnly: false
     targets:
     - azurerm_resource_group.rg
+    templateUuid: null
+    templateVariables: null
+    templateVersion: null
     tfVarFiles: ''
     tfVarGitFileConfig: null
     timeoutMillis: 300000
