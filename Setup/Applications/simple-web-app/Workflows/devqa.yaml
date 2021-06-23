@@ -103,7 +103,10 @@ preDeploymentSteps:
     tfVarFiles: ''
     tfVarGitFileConfig: null
     timeoutMillis: 300000
-    variables: null
+    variables:
+    - name: env
+      valueType: TEXT
+      value: ${env.name}
     workspace: ''
 rollbackPhases:
 - type: KUBERNETES
