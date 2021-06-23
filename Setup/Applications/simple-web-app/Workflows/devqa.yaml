@@ -20,7 +20,7 @@ phases:
 - type: KUBERNETES
   computeProviderName: Kubernetes Cluster
   daemonSet: false
-  infraDefinitionName: k8s-devqa
+  infraDefinitionName: devqa
   name: Canary
   phaseSteps:
   - type: K8S_PHASE_STEP
@@ -54,7 +54,7 @@ phases:
 - type: KUBERNETES
   computeProviderName: Kubernetes Cluster
   daemonSet: false
-  infraDefinitionName: k8s-devqa
+  infraDefinitionName: devqa
   name: Primary
   phaseSteps:
   - type: K8S_PHASE_STEP
@@ -112,7 +112,7 @@ rollbackPhases:
 - type: KUBERNETES
   computeProviderName: Kubernetes Cluster
   daemonSet: false
-  infraDefinitionName: k8s-devqa
+  infraDefinitionName: devqa
   name: Rollback Canary
   phaseNameForRollback: Canary
   phaseSteps:
@@ -131,7 +131,7 @@ rollbackPhases:
 - type: KUBERNETES
   computeProviderName: Kubernetes Cluster
   daemonSet: false
-  infraDefinitionName: k8s-devqa
+  infraDefinitionName: devqa
   name: Rollback Primary
   phaseNameForRollback: Primary
   phaseSteps:
