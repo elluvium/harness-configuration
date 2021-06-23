@@ -77,9 +77,18 @@ preDeploymentSteps:
   name: Terraform Provision
   properties:
     backendConfigs:
-    - name: azurerm
+    - name: key
       valueType: TEXT
-      value: ''
+      value: terraform.tfstate
+    - name: container_name
+      valueType: TEXT
+      value: tstate
+    - name: storage_account_name
+      valueType: TEXT
+      value: tfstateitshare
+    - name: resource_group_name
+      valueType: TEXT
+      value: it-share
     delegateTag: ''
     environmentVariables: null
     exportPlanToApplyStep: false
