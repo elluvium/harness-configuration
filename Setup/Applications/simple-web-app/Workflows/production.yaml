@@ -93,10 +93,16 @@ preDeploymentSteps:
     provisionerName: simple-web-app
     runPlanOnly: false
     targets: null
+    templateUuid: null
+    templateVariables: null
+    templateVersion: null
     tfVarFiles: ''
     tfVarGitFileConfig: null
     timeoutMillis: 300000
-    variables: null
+    variables:
+    - name: env
+      valueType: TEXT
+      value: ${env.name}
     workspace: ''
 rollbackPhases:
 - type: KUBERNETES
