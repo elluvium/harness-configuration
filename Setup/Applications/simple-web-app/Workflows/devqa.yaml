@@ -76,18 +76,25 @@ preDeploymentSteps:
 - type: TERRAFORM_PROVISION
   name: Terraform Provision
   properties:
+    backendConfigs:
+    - name: azurerm
+      valueType: TEXT
+      value: ''
     delegateTag: ''
+    environmentVariables: null
     exportPlanToApplyStep: false
-    inheritApprovedPlan: true
+    inheritApprovedPlan: false
     name: Terraform Provision
     provisionerName: simple-web-app
     runPlanOnly: false
+    targets: null
     templateUuid: null
     templateVariables: null
     templateVersion: null
     tfVarFiles: ''
     tfVarGitFileConfig: null
     timeoutMillis: 300000
+    variables: null
     workspace: ''
 rollbackPhases:
 - type: KUBERNETES
